@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="card">
+<div class="card-body">
+<h4 class="card-title">Регистрация нового клиента</h4>
+
+<form method="post">
+{% csrf_token %}
+
+    {{ form.as_p }}
+
+<button type="submit" class="button">Создать аккаунт</button>
+</form>
+</div>
+</div>
+</body>
+</html>

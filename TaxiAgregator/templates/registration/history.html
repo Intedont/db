@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>История заказов</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-body">
+        <h3>История заказов</h3>
+        {% if history %}
+        <ul>
+        {% for order in history %}
+            <li><h3>id заказа: {{ order.order_id }} Имя водителя: {{ order.driver.name }} {{ order.driver.last_name }} Сумма заказа: {{ order.sum }}</h3></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>Пока не было ни одной поездки.</p>
+        {% endif %}
+    </div>
+
+    <form action="/taxi/order">
+    <input type="submit" value="Новая поездка" />
+    </form>
+</div>
+</body>
+</html>

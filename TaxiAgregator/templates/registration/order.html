@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказать такси</title>
+</head>
+<body>
+
+<div>
+    <section>
+        <ul>
+            {% if username %}
+                <li> <a href="/taxi/history">({{ username }})</a> <a href="/taxi/logout"> Выйти</a> </li>
+            {% else %}
+                <li><a href="/accounts/login">Войти</a></li>
+            {% endif %}
+        </ul>
+    </section>
+</div>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Введите координаты для вызова такси</h4>
+
+            <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="button">Log in</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

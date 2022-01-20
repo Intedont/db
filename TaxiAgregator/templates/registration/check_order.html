@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Текущий заказ</title>
+</head>
+<body>
+    <div class="card">
+<div class="card-body">
+    <h4 class="card-title">Ваш заказ</h4>
+    <h4>За вами приедет {{ driver }}</h4>
+    <h4>На автомобиле {{ auto_brand }} {{ auto_model }} с номером {{ number }}</h4>
+
+
+    <form action="/taxi/history">
+    <input type="submit" value="Завершить поездку" />
+    </form>
+</div>
+</div>
+</body>
+</html>
